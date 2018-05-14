@@ -1,0 +1,39 @@
+{
+  "id": "net.zwegers.homey.entoneir",
+  "version": "1.0.0",
+  "compatibility": ">=1.5.0",
+  "sdk": 2,
+  "name": {
+    "en": "Entone IR",
+	"nl": "Entone IR"
+  },
+  "description": {
+    "en": "Adds support for Entone Setop Box",
+	"nl": "Ondersteuning voor Entone Setop Box (T-Mobile Thuis)"
+  },
+  "category": [
+    "appliances"
+  ],
+  "permissions": [
+    "homey:wireless:ir"
+  ],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Zwegers.net",
+    "email": "homey@zwegers.net"
+  },
+  "signals": {
+      "ir": {
+            "entone": {
+                "type": "prontohex",
+                "cmds": {
+                    "ON": "0000 0073 0000 0012 000F 000A 0006 000A 0006 0016 0006 000A 0006 0010 0006 0016 0006 0016 0006 000A 0006 000A 0006 000A 0006 0016 0006 0010 0006 001C 0006 000A 0006 000A 0006 001C 0006 000A 0006 0C93",
+                    "OFF": "0000 0073 0000 0012 000F 000A 0006 000A 0006 0016 0006 000A 0006 0010 0006 0016 0006 0016 0006 000A 0006 000A 0006 0016 0006 0016 0006 0010 0006 001C 0006 000A 0006 000A 0006 001C 0006 000A 0006 0C86"
+                }
+            }
+        }
+  }
+}

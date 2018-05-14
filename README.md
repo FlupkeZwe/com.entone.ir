@@ -1,2 +1,3 @@
-# net.zwegers.homey.entoneir
-Homey App for Entone Setop box control
+# Entone IR
+
+Adds support for Entone Setop Box
