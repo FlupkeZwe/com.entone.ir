@@ -2,19 +2,18 @@
 
 const Homey = require('homey');
 
-module.exports = class Remote extends Homey.Driver {
+module.exports = class EntoneRemoteDriver extends Homey.Driver {
 
     onPairListDevices( data, callback ) {
 
         let devices = [
             {
                 // Required properties:
-                "name": "Entone Kamai 400/500 series setopbox",
+                "name": "Entone Kamai 400/500 series settopbox",
                 "data": {"id": "entone500"}
             }
-        ]
-        this.log('Pair List devices');
+        ];
         callback(null, devices);
 
     }
-}
+};

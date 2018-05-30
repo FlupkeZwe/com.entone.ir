@@ -4,12 +4,12 @@
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
-    "en": "Entone SetopBox IR",
-    "nl": "Entone SetopBox IR"
+    "en": "Entone Settopbox IR",
+    "nl": "Entone Settopbox IR"
   },
   "description": {
-    "en": "Adds support for Entone Setop Box",
-    "nl": "Ondersteuning voor Entone Setop Box (T-Mobile Thuis)"
+    "en": "Adds support for Entone Settopbox",
+    "nl": "Ondersteuning voor Entone Settopbox (T-Mobile Thuis)"
   },
   "category": [
     "appliances"
@@ -87,7 +87,7 @@
   },
   "drivers": [
     {
-      "id": "remote",
+      "id": "entone_remote",
       "class": "tv",
       "capabilities": [
         "onoff",
@@ -95,15 +95,21 @@
         "channel_down",
         "volume_up",
         "volume_down",
-        "channel_switch"
+        "channel_switch",
+        "volume_mute"
       ],
+      "capabilitiesOptions": {
+        "volume_mute": {
+          "getable": false
+        }
+      },
       "name": {
         "en": "Entone Remote",
         "nl": "Entone Afstandsbediening"
       },
       "images": {
-        "large": "/drivers/remote/assets/images/large.png",
-        "small": "/drivers/remote/assets/images/small.png"
+        "large": "/drivers/entone_remote/assets/images/large.png",
+        "small": "/drivers/entone_remote/assets/images/small.png"
       },
       "pair": [
         {
@@ -153,6 +159,25 @@
             "min": 0,
             "max": 999,
             "step": 1
+          },
+          {
+            "name": "entoneDevice",
+            "type": "device",
+            "filter": "driver_id=entone_remote"
+          }
+        ]
+      },
+      {
+        "id": "volume_mute",
+        "title": {
+          "en": "Mute",
+          "nl": "Zet het geluid uit of aan"
+        },
+        "args": [
+          {
+            "name": "entoneDevice",
+            "type": "device",
+            "filter": "driver_id=entone_remote"
           }
         ]
       }
