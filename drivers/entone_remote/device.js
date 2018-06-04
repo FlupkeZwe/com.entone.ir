@@ -21,7 +21,7 @@ module.exports = class EntoneRemoteDevice extends Homey.Device {
 
         this.registerCapabilityListener('volume_mute', () => {return this._performCommand('MUTE_TOGGLE');});
         let volumeMuteAction = new Homey.FlowCardAction('volume_mute');
-        channelSwitchAction
+        volumeMuteAction
             .register()
             .registerRunListener(( ) => {
                 return this._performCommand('MUTE_TOGGLE')
