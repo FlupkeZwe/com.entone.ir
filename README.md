@@ -10,3 +10,5 @@ This includes:
 - Switch to a specific channel
 
 In the Netherlands this type of settopbox is used by T-Mobile Thuis.
+
+Version 1.0.2 fixes a resource leak when sending signals.
